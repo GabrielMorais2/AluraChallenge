@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.alurachallenge.model.Videos;
 
-public interface VideosRepository extends JpaRepository<Videos, Long> {
+import java.util.List;
 
+public interface VideosRepository extends JpaRepository<Videos, Long> {
+    List<Videos> findByTitulo(String titulo);
 }
